@@ -40,6 +40,8 @@ form {
     padding: 10px;
     width: 100% auto;
     align-items: center;
+    margin-top:5px;
+    margin-bottom: 5px;
 }
 
 h2 {
