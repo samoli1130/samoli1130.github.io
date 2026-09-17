@@ -1,0 +1,35 @@
+/*style.css*/
+body {
+    background-color:rgb(250, 235, 215);
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    color:grey
+}
+
+h1 {
+    background-color: rgb(33, 33, 104);
+    color: whitesmoke;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+table {
+
+}
+
+th, td {
+
+}
+
+th {
+
+}
+
+a {
+
+}
+
+a:hover {
+
+}
