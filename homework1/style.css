@@ -36,5 +36,10 @@ th {
 form {
     border: 2px solid gray;
     text-align: left;
+    background-color:rgb(218, 204, 186);
+}
+
+h2 {
+    text-align: Center;
     
 }
