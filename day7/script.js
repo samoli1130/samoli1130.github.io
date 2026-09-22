@@ -19,5 +19,12 @@ function takeDamage() {
     {
         healthText.innerText = 0;
         statusText.innerText = "Game Over!";
+
+        statusText.style.color = "#c02e1e";
+        statusText.style.fontWeight = "bold";
+        document.body.style.backgroundColor = "#5a1a1a";
+
+        document.querySelector("button").disabled = true;
+        document.querySelector("button").innerText = "Dead";
     }
 }
