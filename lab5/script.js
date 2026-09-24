@@ -1,6 +1,6 @@
 let currentSavings = 10000;
 const withdrawClick = 100;
-const depositClick
+const depositClick = 100;
 
 function withdrawAction() {
     currentSavings = currentSavings - withdrawClick;
