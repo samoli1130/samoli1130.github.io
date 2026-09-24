@@ -17,17 +17,26 @@ body {
     margin: 0 auto;
 }
 
-button {
+#deposit-Button {
     padding: 10px 20px;
     font-size: 16px;
     font-weight: bold;
-    background-color: goldenrod;
+    background-color: rgb(40, 104, 15);
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
-
+#withdraw-Button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(218, 32, 32);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 button:hover {
-    background-color: crimson;
+    background-color: rgb(247, 216, 37);
 }
