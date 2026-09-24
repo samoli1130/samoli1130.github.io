@@ -30,7 +30,7 @@ function withdrawAction() {
     }
 }
 
-function depositAction () {
+function depositAction() {
     currentSavings = currentSavings + depositClick;
 
     const savingsText = document.getElementById("savings-display");
