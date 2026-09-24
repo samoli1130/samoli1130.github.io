@@ -27,6 +27,8 @@ function withdrawAction() {
 
         document.querySelector("button").disabled = true;
         document.querySelector("button").innerText = "Dead";
+        document.querySelector("deposit-Button").disabled = true;
+        document.querySelector("deposit-Button").innertext= "Dead";
     }
 }
 
