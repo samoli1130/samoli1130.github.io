@@ -48,7 +48,7 @@ function depositAction() {
     }
     else 
     {
-        savingsText.innerText = 2500;
+        savingsText.innerText = 5000;
         statusText.innerText = "You win!";
 
         statusText.style.color = "#12771b";
