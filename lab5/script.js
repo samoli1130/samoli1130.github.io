@@ -26,9 +26,9 @@ function withdrawAction() {
         document.body.style.backgroundColor = "#5a1a1a";
 
         document.querySelector("button").disabled = true;
-        document.querySelector("button").innerText = "Dead";
-        document.querySelector("deposit-Button").disabled = true;
-        document.querySelector("deposit-Button").innertext= "Dead";
+        document.querySelector("button").innerText = "Restart";
+       document.getElementById("deposit-Button").disabled = true;
+       document.getElementById("deposit-Button").innerText= "Restart";
     }
 }
 
@@ -48,15 +48,17 @@ function depositAction() {
     }
     else 
     {
-        savingsText.innerText = 0;
-        statusText.innerText = "Out of Money!";
+        savingsText.innerText = 2500;
+        statusText.innerText = "You win!";
 
-        statusText.style.color = "#f1402c";
+        statusText.style.color = "#12771b";
         statusText.style.fontWeight = "bold";
-        document.body.style.backgroundColor = "#5a1a1a";
+        document.body.style.backgroundColor = "#194d12";
 
         document.querySelector("button").disabled = true;
-        document.querySelector("button").innerText = "Dead";
+        document.querySelector("button").innerText = "Restart";
+        document.getElementById("withdraw-Button").disabled = true;
+        document.getElementById("withdraw-Button").innerText = "Restart";
 
 }
 }
