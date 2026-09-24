@@ -40,7 +40,7 @@ function depositAction() {
 
     savingsText.innerText = currentSavings;
 
-    if (currentSavings > 0)
+    if (currentSavings < 5000)
          {
         savingsText.innerText =  currentSavings;
         statusText.innerText = "Deposited $100!";
