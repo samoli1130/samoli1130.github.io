@@ -37,6 +37,10 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
-button:hover {
+#withdraw-Button:hover {
+    background-color: rgb(247, 216, 37);
+}
+
+#deposit-Button:hover {
     background-color: rgb(247, 216, 37);
 }
