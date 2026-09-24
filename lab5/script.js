@@ -26,9 +26,9 @@ function withdrawAction() {
         document.body.style.backgroundColor = "#5a1a1a";
 
         document.querySelector("button").disabled = true;
-        document.querySelector("button").innerText = "Restart";
+        document.querySelector("button").innerText = "You Lost!";
        document.getElementById("deposit-Button").disabled = true;
-       document.getElementById("deposit-Button").innerText= "Restart";
+       document.getElementById("deposit-Button").innerText= "You Lost!";
     }
 }
 
@@ -56,9 +56,9 @@ function depositAction() {
         document.body.style.backgroundColor = "#194d12";
 
         document.querySelector("button").disabled = true;
-        document.querySelector("button").innerText = "Restart";
+        document.querySelector("button").innerText = "You Won!";
         document.getElementById("deposit-Button").disabled = true;
-        document.getElementById("deposit-Button").innerText = "Restart";
+        document.getElementById("deposit-Button").innerText = "You Won!";
 
 }
 }
