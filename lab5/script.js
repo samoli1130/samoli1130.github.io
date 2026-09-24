@@ -46,12 +46,12 @@ function depositAction() {
     }
     else 
     {
-        savingsText.innerText = 10000;
-        statusText.innerText = "You Win!";
+        savingsText.innerText = 0;
+        statusText.innerText = "Out of Money!";
 
-        statusText.style.color = "#067415";
+        statusText.style.color = "#f1402c";
         statusText.style.fontWeight = "bold";
-        document.body.style.backgroundColor = "#1a5a23";
+        document.body.style.backgroundColor = "#5a1a1a";
 
         document.querySelector("button").disabled = true;
         document.querySelector("button").innerText = "Dead";
