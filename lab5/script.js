@@ -36,7 +36,7 @@ function depositAction() {
     const savingsText = document.getElementById("savings-display");
     const statusText = document.getElementById("status-message");
 
-    healthText.innerText = currentSavings;
+    savingsText.innerText = currentSavings;
 
     if (currentSavings > 0)
          {
