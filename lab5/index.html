@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!-- rework this code to represent a bank account, it should have two buttons, one to deposit and one to withdraw
+ In the java script create 2 functions, one to deposit and one to withdraw
+ no negatives -->
+<html lang="en">
+    <head>
+        <title>Lab 5- Bank Simulation</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="bank-account">
+            <h2> Your Bank Account</h2>
+
+            <p>Current Savings (in USD): <span id="savings-display">10,000</span></p>
+            <p id="status-message">Deposit or Withdraw Money</p>
+
+            <button onclick="withdrawAction()">Withdraw $100</button>
+            <button onclick="depositAction()">Deposit $100</button>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
