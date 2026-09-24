@@ -1,14 +1,14 @@
-let currentSavings = 10000;
+let currentSavings = 1000;
 const withdrawClick = 100;
 const depositClick = 100;
 
 function withdrawAction() {
     currentSavings = currentSavings - withdrawClick;
 
-    const healthText = document.getElementById("savings-display");
+    const savingsText = document.getElementById("savings-display");
     const statusText = document.getElementById("status-message");
 
-    healthText.innerText = currentSavings;
+    savingsText.innerText = currentSavings;
 
     if (currentSavings > 0)
          {
@@ -46,7 +46,7 @@ function depositAction() {
     }
     else 
     {
-        savingsText.innerText = 100000000;
+        savingsText.innerText = 10000;
         statusText.innerText = "You Win!";
 
         statusText.style.color = "#067415";
