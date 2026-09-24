@@ -57,8 +57,8 @@ function depositAction() {
 
         document.querySelector("button").disabled = true;
         document.querySelector("button").innerText = "Restart";
-        document.getElementById("withdraw-Button").disabled = true;
-        document.getElementById("withdraw-Button").innerText = "Restart";
+        document.getElementById("deposit-Button").disabled = true;
+        document.getElementById("deposit-Button").innerText = "Restart";
 
 }
 }
