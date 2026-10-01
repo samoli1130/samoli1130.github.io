@@ -9,7 +9,7 @@ const contents= [
 
 function loadInventory() {
     const listElement = document.getElementById("item-list");
-    listElement.innerHtml = "";
+    listElement.innerHTML = "";
 
-
+    
 }
