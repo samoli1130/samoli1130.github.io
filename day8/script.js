@@ -7,9 +7,9 @@ const contents= [
     "Pet Lizard"
 ];
 
-func loadInventory() {
+function loadInventory() {
     const listElement = document.getElementById("item-list");
     listElement.innerHtml = "";
 
-    
+
 }
