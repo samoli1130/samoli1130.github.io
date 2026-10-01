@@ -28,7 +28,7 @@ li {
     padding: 10px;
     border-radius: 5px;
     font-weight: bold;
-    color: aquamarine;
+    color: white;
 }
 
 
@@ -36,6 +36,7 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     font-weight: bold;
+    width: 150px;
     background-color: goldenrod;
     color: white;
     border: none;
