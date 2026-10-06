@@ -1,31 +1,38 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carolina Football Game Day Checklist</title>
-  <link rel="stlesheet" href="style.css">
+   <head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Carolina Game Day Checklist</title> 
+     <link rel="stylesheet" href="styles.css">
+     </head>
+      <body> 
+        <main>
+           <h1>Carolina Game Day Checklist</h1>
+    <form id="checklist-form">
+        <label for="item-input">Item to bring:</label>
+        <input
+            type="text"
+            id="item-input"
+            name="item"
+            placeholder="Enter an item"
+            required
+        >
+        <button type="submit">Add Item to Bag</button>
+    </form>
 
-</head>
+    <section aria-labelledby="items-heading">
+        <h2 id="items-heading">Items to Bring</h2>
 
-<body>
+        <ul id="checklist-items">
+            <li>Game ticket</li>
+            <li>Carolina gear</li>
+            <li>Phone</li>
+        </ul>
+    </section>
+</main>
 
-  <div class="checklist">
-    <h1>Carolina Football Game Day</h1>
+<script src="script.js"></script>
 
-    <div class="input-area">
-      <input
-        type="text"
-        id="itemInput"
-        placeholder="Add to bag"
-      >
-
-      <button onclick="addItem()">Add Item</button>
-    </div>
-
-    <ul id="checklistItems">
-    </ul>
-  </div>
- <script src="script.js"></script>
-</body>
+</body> 
 </html>
