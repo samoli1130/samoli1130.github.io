@@ -1,0 +1,141 @@
+/* Carolina Game Day Checklist
+Garnet & Black Theme
+*/
+
+:root {
+--garnet: #73000a;
+--dark-garnet: #560008;
+--black: #111111;
+--light-gray: #f4f4f4;
+--white: #ffffff;
+--border-gray: #d6d6d6;
+}
+
+{
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+min-height: 100vh;
+font-family: Arial, Helvetica, sans-serif;
+background-color: var(--black);
+color: var(--black);
+display: flex;
+justify-content: center;
+align-items: flex-start;
+padding: 40px 20px;
+}
+
+main {
+width: 100%;
+max-width: 650px;
+background-color: var(--white);
+border-top: 8px solid var(--garnet);
+border-radius: 10px;
+padding: 35px;
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+h1 {
+margin-top: 0;
+margin-bottom: 30px;
+text-align: center;
+color: var(--garnet);
+font-size: 2.2rem;
+}
+
+h2 {
+margin-top: 35px;
+margin-bottom: 15px;
+color: var(--black);
+font-size: 1.4rem;
+border-bottom: 3px solid var(--garnet);
+padding-bottom: 8px;
+}
+
+form {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+label {
+font-weight: bold;
+color: var(--black);
+}
+
+input[type="text"] {
+width: 100%;
+padding: 12px;
+border: 2px solid var(--border-gray);
+border-radius: 6px;
+font-size: 1rem;
+background-color: var(--light-gray);
+}
+
+input[type="text"]:focus {
+outline: none;
+border-color: var(--garnet);
+box-shadow: 0 0 0 3px rgba(115, 0, 10, 0.15);
+}
+
+button {
+margin-top: 5px;
+padding: 12px 18px;
+border: none;
+border-radius: 6px;
+background-color: var(--garnet);
+color: var(--white);
+font-size: 1rem;
+font-weight: bold;
+cursor: pointer;
+transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+background-color: var(--dark-garnet);
+transform: translateY(-2px);
+}
+
+button:active {
+transform: translateY(0);
+}
+
+ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+li {
+background-color: var(--light-gray);
+border: 2px solid var(--garnet);
+border-left: 6px solid var(--garnet);
+border-radius: 6px;
+padding: 14px 16px;
+margin-bottom: 12px;
+font-size: 1.05rem;
+font-weight: 500;
+}
+
+li:hover {
+background-color: #eeeeee;
+}
+
+/* Mobile-friendly layout */
+@media (max-width: 600px) {
+body {
+padding: 20px 12px;
+}
+
+main {
+    padding: 25px 20px;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+
+}
