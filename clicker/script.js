@@ -12,7 +12,7 @@ function writeCode()
     updateScreen();
 }
 
-function updateScreen ()
+function updateScreen()
 {
     document.getElementById("score-display").innerText = linesOfCode + "lines of code";
 }
