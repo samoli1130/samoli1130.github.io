@@ -36,7 +36,7 @@ function buyIntern()
 
 function updateScreen()
 {
-    document.getElementById("score-display").innerText = linesOfCode + "lines of code";
+    document.getElementById("score-display").innerText = linesOfCode + " lines of code";
 
     document.getElementById("power-display").innerText = clickPower;
     document.getElementById("cost-display").innerText = upgradeCost;
