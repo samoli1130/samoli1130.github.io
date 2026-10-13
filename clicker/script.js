@@ -21,12 +21,26 @@ function buyKeyboard ()
         upgradeCost = upgradeCost * 1.5;
         updateScreen();
     }
+}
 
+function buyIntern()
+{
+    if(linesOfCode >= internCost)
+    {
+        linesOfCode = linesOfCode - internCost;
+        interns = interns + 1;
+        internCost = internCost * 1.5;
+        updateScreen();
+    }
+}
 function updateScreen()
 {
     document.getElementById("score-display").innerText = linesOfCode + "lines of code";
 
     document.getElementById("power-display").innerText = clickPower;
     document.getElementById("cost-display").innerText = upgradeCost;
+
+    document.getElementById("intern-display").innerText = interns;
+    document.getElementById("intern-display-cost").innterText = internCost;
 }
 
