@@ -14,15 +14,13 @@ function writeCode()
 
 function buyKeyboard ()
 {
-    if(linesOfCode >= upgradeCost)
+    if( linesOfCode >= upgradeCost )
     {
         linesOfCode = linesOfCode - upgradeCost;
         clickPower = clickPower + 1;
         upgradeCost = upgradeCost * 1.5;
         updateScreen();
     }
-}
-
 
 function updateScreen()
 {
