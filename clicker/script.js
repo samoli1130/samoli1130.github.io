@@ -12,7 +12,7 @@ function writeCode()
     updateScreen();
 }
 
-function buyKeyboard ()
+function buyKeyboard()
 {
     if( linesOfCode >= upgradeCost )
     {
@@ -33,6 +33,7 @@ function buyIntern()
         updateScreen();
     }
 }
+
 function updateScreen()
 {
     document.getElementById("score-display").innerText = linesOfCode + "lines of code";
@@ -43,4 +44,14 @@ function updateScreen()
     document.getElementById("intern-display").innerText = interns;
     document.getElementById("intern-display-cost").innterText = internCost;
 }
+
+setInterval(function() {
+if(interns > 0)
+    {
+     linesOfCode = linesOfCode + interns;
+     updateScreen();
+    }
+},
+1000
+);
 
