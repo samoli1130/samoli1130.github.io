@@ -42,7 +42,7 @@ function updateScreen()
     document.getElementById("cost-display").innerText = upgradeCost;
 
     document.getElementById("intern-display").innerText = interns;
-    document.getElementById("intern-display-cost").innterText = internCost;
+    document.getElementById("intern-display-cost").innerText = internCost;
 }
 
 setInterval(function() {
