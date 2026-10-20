@@ -36,23 +36,24 @@ body {
 }
 
 #intern-button {
-    font-size: 20px;
+    font-size: 15px;
     padding: 15px, 35px;
     margin: 15px, 0;
     background-color: #3072c9;
     border: none;
     border-radius: 6px;
-    font-weight: bold;
+    color:white;
+    
 }
 
 #upgrade-button {
-    font-size: 20px;
+    font-size: 15px;
     padding: 15px, 35px;
     margin: 15px, 0;
     background-color: #3072c9;
     border: none;
     border-radius: 6px;
-    font-weight: bold;
+   color:white;
 }
 
 #upgrade-button:hover {
