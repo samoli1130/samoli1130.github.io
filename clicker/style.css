@@ -36,7 +36,7 @@ body {
 }
 
 #intern-button {
-    font-size: 15px;
+    font-size: 20px;
     padding: 20px, 40px;
     margin: 15px, 0;
     background-color: #3072c9;
@@ -47,7 +47,7 @@ body {
 }
 
 #upgrade-button {
-    font-size: 15px;
+    font-size: 20px;
     padding: 20px, 40px;
     margin: 15px, 0;
     background-color: #3072c9;
