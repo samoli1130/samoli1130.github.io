@@ -18,7 +18,7 @@ body {
 
 #main-button {
     font-size: 24px;
-    padding: 20px, 40px;
+    padding: 30px, 50px;
     margin: 20px 0;
     background-color: teal;
     color: white;
@@ -37,7 +37,7 @@ body {
 
 #intern-button {
     font-size: 15px;
-    padding: 15px, 35px;
+    padding: 20px, 40px;
     margin: 15px, 0;
     background-color: #3072c9;
     border: none;
@@ -48,7 +48,7 @@ body {
 
 #upgrade-button {
     font-size: 15px;
-    padding: 15px, 35px;
+    padding: 20px, 40px;
     margin: 15px, 0;
     background-color: #3072c9;
     border: none;
