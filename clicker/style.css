@@ -54,3 +54,12 @@ body {
     border-radius: 6px;
     font-weight: bold;
 }
+
+#upgrade-button:hover {
+    background-color:darkblue;
+    color:white;
+}
+#intern-button:hover {
+    background-color:darkblue;
+    color:white;
+}
