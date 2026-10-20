@@ -34,3 +34,23 @@ body {
     padding: 20px;
     border-radius: 4px;
 }
+
+#intern-button {
+    font-size: 20px;
+    padding: 15px, 35px;
+    margin: 15px, 0;
+    background-color: #3072c9;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+#upgrade-button {
+    font-size: 20px;
+    padding: 15px, 35px;
+    margin: 15px, 0;
+    background-color: #3072c9;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
