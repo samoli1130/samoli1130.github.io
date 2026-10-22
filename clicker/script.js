@@ -7,15 +7,16 @@ let interns = 0;
 let internCost = 100;
 
 let managers = 0;
-let upgradeCost = 500;
+let managerCost = 500;
 
 let computerCost = 250;
-let computerPower = 0
+let computerPower = 0;
+
 let totalClick = clickPower + computerPower;
 
 function writeCode() 
 {
-    linesOfCode = linesOfCode + clickPower + computerPower;
+    linesOfCode = linesOfCode + totalClick;
     updateScreen();
 }
 
@@ -78,4 +79,3 @@ if(interns > 0)
 },
 1000
 );
-
