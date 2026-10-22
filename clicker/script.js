@@ -58,8 +58,8 @@ function buyIntern()
     }
 }
 
-function buyManager()
-    if(linesOfCode >= managerCost)
+function buyManager() {
+    if( linesOfCode >= managerCost )
     {
         linesOfCode = linesOfCode - managerCost;
         managers = managers + 5;
@@ -67,7 +67,7 @@ function buyManager()
         managerCost = managerCost * 1.5;
         updateScreen();
     }
-
+}
 function updateScreen()
 {
     document.getElementById("score-display").innerText = linesOfCode + " lines of code";
