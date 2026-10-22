@@ -27,6 +27,7 @@ function buyKeyboard()
         linesOfCode = linesOfCode - upgradeCost;
         clickPower = clickPower + 1;
         upgradeCost = upgradeCost * 1.5;
+        totalClick = totalClick + 1;
         updateScreen();
     }
 }
@@ -38,6 +39,7 @@ function buyComputer()
         linesOfCode = linesOfCode - computerCost;
         computerPower = computerPower + 5;
         computerCost = computerCost * 1.5;
+        totalClick = totalClick + 5;
         updateScreen();
     }
 }
