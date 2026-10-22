@@ -27,6 +27,11 @@ body {
     font-weight: bold;
 
 }
+#main-button:hover {
+    background-color: rgb(1, 83, 83);
+    border-color: white;
+    border:1cm;
+}
 
 #shop {
     margin-top: 30px;
