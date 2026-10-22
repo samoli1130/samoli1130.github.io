@@ -14,6 +14,8 @@ let computerPower = 0;
 
 let managerDisplay = 0;
 
+let autoTotal = 0;
+
 let totalClick = clickPower + computerPower;
 
 function writeCode() 
@@ -54,6 +56,7 @@ function buyIntern()
         linesOfCode = linesOfCode - internCost;
         interns = interns + 1;
         internCost = internCost * 1.5;
+        autoTotal= autoTotal + 1;
         updateScreen();
     }
 }
@@ -65,6 +68,7 @@ function buyManager() {
         managers = managers + 5;
         managerDisplay = managerDisplay + 1;
         managerCost = managerCost * 1.5;
+        autoTotal = autoTotal + 5;
         updateScreen();
     }
 }
@@ -85,6 +89,8 @@ function updateScreen()
 
     document.getElementById("manager-display").innerText = managerDisplay;
     document.getElementById("cost-manager").innerText = managerCost;
+
+    document.getElementById("total-auto").innerText = autoTotal;
 }
 
 setInterval(function() {
