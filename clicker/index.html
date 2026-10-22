@@ -10,19 +10,29 @@
                 <h1>Code Clicker</h1>
                 <h2 id="score-display"> 0 lines of code </h2>
                 <button id="main-button" onclick="writeCode()"> Write Code </button>
+                <p>Total Click Power: <span id="total-click-display">1</span></p>
             </header>
 
             <main id="shop">
                 <h3>Keyboard Store (Manual Upgrade)</h3>
-                <p>Current Click Power: <span id="power-display">1</span></p>
+                <p>Current Keyboard Click Power: <span id="power-display">1</span></p>
                 <button id="upgrade-button" onclick="buyKeyboard()">
                     Buy Mechanical Keyboard (Cost: <span id="cost-display">50</span>)
+                </button>
+                <h3>Computer Store (Manual Upgrade +5 Power)</h3>
+                <button id="upgrade-computer" onclick="buyComputer()">
+                    <p> Current Computer Click Power: <span id="computer-display">0</span></p>
+                    Buy New Computer (Cost: <span id="cost-computer-display">250</span>)
                 </button>
 
                 <h3>Hiring Department (Auto Clicking)</h3>
                 <p>Active Interns: <span id="intern-display">0</span></p>
                 <button id="intern-button" onclick="buyIntern()">
                     Hire Intern (Cost: <span id="cost-intern-display">100</span>)
+                </button>
+                <p>Active Managers (+5): <span id="manager-display">0</span></p>
+                <button id="manager-button" onclick="buyManager()">
+                    Hire Manager (Cost: <span id="cost-manager">500</span>)
                 </button>
             </main>
         </div>

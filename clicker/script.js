@@ -6,9 +6,16 @@ let upgradeCost = 50;
 let interns = 0;
 let internCost = 100;
 
+let managers = 0;
+let upgradeCost = 500;
+
+let computerCost = 250;
+let computerPower = 0
+let totalClick = clickPower + computerPower;
+
 function writeCode() 
 {
-    linesOfCode = linesOfCode + clickPower;
+    linesOfCode = linesOfCode + clickPower + computerPower;
     updateScreen();
 }
 
@@ -22,6 +29,18 @@ function buyKeyboard()
         updateScreen();
     }
 }
+
+function buyComputer()
+{
+    if( linesOfCode >= computerCost)
+    {
+        linesOfCode = linesOfCode - computerCost;
+        computerPower = computerPower + 5;
+        computerCost = computerCost * 1.5;
+        updateScreen();
+    }
+}
+
 
 function buyIntern()
 {
@@ -43,6 +62,11 @@ function updateScreen()
 
     document.getElementById("intern-display").innerText = interns;
     document.getElementById("cost-intern-display").innerText = internCost;
+
+    document.getElementById("total-click-display").innerText = totalClick;
+
+    document.getElementById("computer-display").innerText = computerPower;
+    document.getElementById("cost-computer-display").innerText = computerCost;
 }
 
 setInterval(function() {
