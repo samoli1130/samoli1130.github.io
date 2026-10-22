@@ -12,6 +12,8 @@ let managerCost = 500;
 let computerCost = 250;
 let computerPower = 0;
 
+let managerDisplay = 0;
+
 let totalClick = clickPower + computerPower;
 
 function writeCode() 
@@ -56,6 +58,16 @@ function buyIntern()
     }
 }
 
+function buyManager()
+    if(linesOfCode >= managerCost)
+    {
+        linesOfCode = linesOfCode - managerCost;
+        managers = managers + 5;
+        managerDisplay = managerDisplay + 1;
+        managerCost = managerCost * 1.5;
+        updateScreen();
+    }
+
 function updateScreen()
 {
     document.getElementById("score-display").innerText = linesOfCode + " lines of code";
@@ -70,6 +82,8 @@ function updateScreen()
 
     document.getElementById("computer-display").innerText = computerPower;
     document.getElementById("cost-computer-display").innerText = computerCost;
+
+    document.getElementById("manager-display").innerText = managerDisplay;
 }
 
 setInterval(function() {
@@ -77,6 +91,17 @@ if(interns > 0)
     {
      linesOfCode = linesOfCode + interns;
      updateScreen();
+    }
+},
+1000
+);
+
+setInterval(function()
+{
+    if(managers > 0)
+    {
+        linesOfCode = linesOfCode + managers;
+        updateScreen();
     }
 },
 1000
