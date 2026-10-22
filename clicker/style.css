@@ -64,3 +64,33 @@ body {
     background-color:darkblue;
     color:white;
 }
+
+#manager-button {
+    font-size: 20px;
+    padding: 20px, 40px;
+    margin: 15px, 0;
+    background-color: #3072c9;
+    border: none;
+    border-radius: 6px;
+    color:white;
+    
+}
+
+#upgrade-computer {
+    font-size: 20px;
+    padding: 20px, 40px;
+    margin: 15px, 0;
+    background-color: #3072c9;
+    border: none;
+    border-radius: 6px;
+   color:white;
+}
+
+#upgrade-computer:hover {
+    background-color:darkblue;
+    color:white;
+}
+#manager-button:hover {
+    background-color:darkblue;
+    color:white;
+}
