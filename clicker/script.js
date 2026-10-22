@@ -84,6 +84,7 @@ function updateScreen()
     document.getElementById("cost-computer-display").innerText = computerCost;
 
     document.getElementById("manager-display").innerText = managerDisplay;
+    document.getElementById("cost-manager").innerText = managerCost;
 }
 
 setInterval(function() {
