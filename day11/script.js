@@ -11,7 +11,7 @@ function startGame()
 {
     score = 0;
     timeLeft = 10;
-    timeDisplay.innerText = time;
+    timeDisplay.innerText = timeLeft;
     scoreDisplay.innerText = score;
 
     startButton.disabled = true;
