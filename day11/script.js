@@ -7,3 +7,13 @@ const scoreDisplay = document.getElementById("score-display");
 const targetElement = document.getElementById("target");
 const startButton = document.getElementById("start-btn");
 
+function startGame()
+{
+    score = 0;
+    timeLeft = 10;
+    timeDisplay.innerText = time;
+    scoreDisplay.innerText = score;
+
+    startButton.disabled = true;
+    targetElement.style.display = "block";
+}
