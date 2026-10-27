@@ -16,4 +16,13 @@ function startGame()
 
     startButton.disabled = true;
     targetElement.style.display = "block";
+    
+    timerId = setInterval(countdown, 1000);
+
+}
+
+function countdown()
+{
+    timeLeft--;
+    timeDisplay.innerText = timeLeft;
 }
