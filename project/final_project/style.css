@@ -1,5 +1,5 @@
 body {
-    background-color: #f5f5f0;
+    background-color:#FFF0F5;
     color:darkslategrey;
     font-family:sans-serif;
     text-align: center;
@@ -7,11 +7,17 @@ body {
 
 }
 
-#welcome {
-    background-color:cornflowerblue;
+h2 {
+    font-family: cursive;
 }
 
-#pageLinks
+#welcome {
+    
+    background-color:#FFB6C1;
+    text-align: center;
+}
+
+#pagelinks
 {
-    background-color:cornflowerblue;
+    background-color:#FFB6C1;
 }
