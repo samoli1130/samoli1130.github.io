@@ -21,3 +21,12 @@ h2 {
 {
     background-color:#FFB6C1;
 }
+
+footer{
+    border-block: dashed rgb(248, 125, 187) 4px;
+      background-color:#FFF0F5;
+    color:darkslategrey;
+    font-family:sans-serif;
+    text-align: auto;
+    margin: auto;
+}
