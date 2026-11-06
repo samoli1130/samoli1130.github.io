@@ -6,6 +6,54 @@
 </head>
 <body> 
 
+ <form>
+        <label for="assignmentName">Assignment Name:</label>
+        <input
+            type="text"
+            id="assignmentName"
+            name="assignmentName"
+            placeholder="Enter assignment name"
+            required
+        >
+
+        <br><br>
+
+        <label for="dueDate">Due Date:</label>
+        <input
+            type="date"
+            id="dueDate"
+            name="dueDate"
+        >
+
+        <br><br>
+
+        <label for="className">Class:</label>
+        <input
+            type="text"
+            id="className"
+            name="className"
+            placeholder="Enter class name"
+            required
+        >
+
+        <br><br>
+
+        <button type="button">Add Assignment</button>
+
+    </form>
+
+    <h2>My Assignments</h2>
+
+    <ul id="assignmentList">
+
+        <li>
+            <input type="checkbox">
+            <strong>Example Assignment</strong>
+            - Class: Biology
+            - Due Date: November 10, 2026
+        </li>
+
+    </ul>
     <script src="script.js"></script>
 </body>
 </html>
