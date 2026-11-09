@@ -15,11 +15,14 @@ h2 {
     
     background-color:#FFB6C1;
     text-align: center;
+    margin: 10%;
 }
 
 #pagelinks
 {
     background-color:#FFB6C1;
+    text-align: center;
+    margin: 10%;
 }
 
 footer{
