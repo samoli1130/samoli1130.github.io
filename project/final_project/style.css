@@ -17,9 +17,9 @@ h2 {
     text-align: center;
     margin: 10%;
     border-radius: 50px;
-    border-color:#c28b93;
+    border: 5px solid #c28b93;
     padding: 25px;
-    box-shadow: 10px, 10px, grey;
+    box-shadow: 10px 10px grey;
 }
 
 #pagelinks
@@ -28,9 +28,10 @@ h2 {
     text-align: center;
     margin: 10%;
     border-radius: 50px;
-    border-color:#c28b93;
+    border: 5px solid #c28b93;
     padding: 25px;
-    box-shadow: 10px, 10px, grey;
+    box-shadow: 10px 10px grey;
+     
 
 }
 
@@ -44,20 +45,30 @@ footer{
 }
 
 #studypage-btn {
-    background-color: #c28b93;
+    background-color: #ffcbd3;
+    color: grey;
 
-}
-
-#button-hover
-{
-    background-color: #936a70;
 }
 
 #checklist-btn {
-    background-color:#c28b93;
-
+    background-color:#ffcbd3;
+    color:grey;
 }
 
 #minigame-btn {
-    background-color: #c28b93;
+    background-color: #ffcbd3;
+    color: grey;
+}
+
+#studypage-btn:hover {
+    background-color:#c28b93;
+   
+}
+
+#minigame-btn:hover {
+    background-color:#c28b93;
+}
+
+#checklist-btn:hover {
+    background-color:#c28b93;
 }
