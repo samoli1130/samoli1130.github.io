@@ -19,7 +19,7 @@ h2 {
     border-radius: 50px;
     border-color:#c28b93;
     padding: 25px;
-    box-shadow: 5px, 5px, grey;
+    box-shadow: 10px, 10px, grey;
 }
 
 #pagelinks
@@ -30,7 +30,7 @@ h2 {
     border-radius: 50px;
     border-color:#c28b93;
     padding: 25px;
-    box-shadow: 5px, 5px, grey;
+    box-shadow: 10px, 10px, grey;
 
 }
 
@@ -41,4 +41,23 @@ footer{
     font-family:sans-serif;
     text-align: auto;
     margin: auto;
+}
+
+#studypage-btn {
+    background-color: #c28b93;
+
+}
+
+#button-hover
+{
+    background-color: #936a70;
+}
+
+#checklist-btn {
+    background-color:#c28b93;
+
+}
+
+#minigame-btn {
+    background-color: #c28b93;
 }
