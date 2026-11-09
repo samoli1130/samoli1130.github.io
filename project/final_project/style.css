@@ -16,8 +16,9 @@ h2 {
     background-color:#FFB6C1;
     text-align: center;
     margin: 10%;
-    border-radius: 100px;
+    border-radius: 75px;
     border-color:#c28b93;
+    padding: 25px;
 }
 
 #pagelinks
@@ -25,8 +26,9 @@ h2 {
     background-color:#FFB6C1;
     text-align: center;
     margin: 10%;
-    border-radius: 100px;
+    border-radius: 75px;
     border-color:#c28b93;
+    padding: 25px;
 }
 
 footer{
