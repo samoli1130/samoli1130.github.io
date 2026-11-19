@@ -69,4 +69,5 @@ button:disabled {
     border: 5px solid white;
     position: relative;
     left: 50px;
+    text-align:center;
 }
