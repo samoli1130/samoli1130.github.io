@@ -1,16 +1,16 @@
-#body {
+body {
     color: rgb(68, 68, 68);
     background-color:#FFF0F5;
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
-#button {
+button {
     color: rgb(68, 68, 68);
     background-color:#FFB6C1;
     border-radius: 5px;
 }
 
-#buttonhover {
+button:hover {
     color: rgb(68, 68, 68);
     background-color: #c28b93;
 }
