@@ -2,6 +2,9 @@ body {
     color: rgb(68, 68, 68);
     background-color:#FFF0F5;
     font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: larger;
+    padding: 20px;
 }
 
 button {
@@ -14,6 +17,7 @@ button:hover {
     color: rgb(68, 68, 68);
     background-color: #c28b93;
 }
+
 
 
 /* Three-bar menu button */
