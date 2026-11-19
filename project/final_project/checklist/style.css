@@ -18,7 +18,10 @@ button:hover {
     background-color: #c28b93;
 }
 
-
+h1 {
+    font-size:large;
+    color:#aa6c75;
+}
 
 /* Three-bar menu button */
 .menu-btn {
