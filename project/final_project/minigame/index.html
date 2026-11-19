@@ -5,7 +5,19 @@
     <link rel="stylesheet" href="style.css"></link>
     </head>
     <body>
-
+        <header>
+            <h1>Cat Catcher</h1>
+            <div class="hud">
+                <h2>Time: <span id="time-display">10</span></h2>
+                <h2>Score: <span id="score-display">0</span></h2>
+            </div>
+            <button id="start-btn" onclick="startGame()">Start Drill</button>
+        </header>
+        <main id="game-board">
+            <div id="target" onclick="hitTarget()"> 🐈 </div>
+            <div id="bomb" onclick="hitBomb()">💣</div>
+        </main>
+    
         <script src="script.js"></script>
     </body>
 </html>
