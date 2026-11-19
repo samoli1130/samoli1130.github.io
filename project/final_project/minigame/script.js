@@ -38,6 +38,7 @@ function hitTarget()
     score++;
     scoreDisplay.innerText = score;
     moveTarget();
+    moveBomb()''
 }
 
 function moveTarget()
