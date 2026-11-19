@@ -20,7 +20,7 @@ button:hover {
 .menu-btn {
     position: fixed;
     top: 20px;
-    left: 20px;
+    right: 20px;
     font-size: 30px;
     cursor: pointer;
     background: none;
@@ -35,7 +35,7 @@ button:hover {
     width: 0;
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     background-color: #222;
     overflow-x: hidden;
     transition: 0.3s;
