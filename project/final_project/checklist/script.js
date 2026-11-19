@@ -158,3 +158,14 @@ function createAssignment(name, date, classValue, completed) {
     });
 
 }
+
+// Open the sidebar
+function openSidebar() {
+    document.getElementById("mySidebar").style.width = "250px";
+}
+
+// Close the sidebar
+function closeSidebar() {
+    document.getElementById("mySidebar").style.width = "0";
+}
+
