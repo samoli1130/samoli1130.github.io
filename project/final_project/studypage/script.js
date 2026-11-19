@@ -25,10 +25,23 @@ function startTimer(){
     timeLeft--;
  updateDisplay();
 
-        if (timeLeft <= 0) {
+        if (timeLeft <= 0) 
+            {
             clearInterval(timerInterval);
             timerInterval = null;
             alert("Time's up!");
         }
     }, 1000);
+
+    
+}
+
+function resetTimer()
+{
+
+}
+
+function pauseTimer() 
+{
+
 }
