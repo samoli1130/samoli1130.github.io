@@ -17,6 +17,7 @@ function startGame()
 
     startButton.disabled = true;
     targetElement.style.display = "block";
+    bombElement.style.display = "block";
     
     timerId = setInterval(countdown, 1000);
 
@@ -63,7 +64,8 @@ function endGame()
 
 function hitBomb()
 {
-    endGame()
+   
+    endGame();
 }
 
 function moveBomb()
