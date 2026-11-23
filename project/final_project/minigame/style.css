@@ -142,11 +142,10 @@ button:disabled {
 }
 
 #game2 {
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    gap: 5px;
+ text-align:center;
     margin-right: 85px;
     margin-left:auto;
+    margin-bottom: 15px;
 
 
 }
@@ -154,4 +153,13 @@ button:disabled {
 h1 {
     margin-right:85px;
     font-size: X-large;
+}
+
+.tictactoegrid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 5px;
+    margin-right: 85px;
+    margin-left:auto;
+    justify-content: flex-end;
 }
