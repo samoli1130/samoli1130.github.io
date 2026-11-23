@@ -165,7 +165,6 @@ squares[computerMove].textContent = "O";
     }
 
 }
-
 function checkWinner() {
 
     const winningCombinations = [
@@ -202,11 +201,24 @@ function checkWinner() {
 
     // Check for a tie
     if (!board.includes("")) {
-
         statusText.textContent = "It's a Tie!";
         gameActive = false;
         return;
-
     }
 
 }
+resetButton.addEventListener("click", function() {
+
+    // Empty the board
+    board = ["", "", "", "", "", "", "", "", ""];
+
+    // Clear all the squares
+    squares.forEach(function(square) {
+        square.textContent = "";
+    });
+
+    // Reset the game
+    currentPlayer = "X";
+    gameActive = true;
+
+});
