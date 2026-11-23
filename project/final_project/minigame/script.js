@@ -134,26 +134,22 @@ squares.forEach(function(square, index) {
 });
 
 function computerTurn() {
+// Find all empty squares
+let emptySquares = [];
 
-    // Find all empty squares
-    let emptySquares = [];
+board.forEach(function(square, index) {
+    if (square === "") {
+        emptySquares.push(index);
+    }
+});
 
-    board.forEach(function(square, index) {
-
-        if (square === "") {
-            emptySquares.push(index);
-        }
-
-    });
-
-    // Choose a random empty square
-    let randomIndex = Math.floor(
-        Math.random() * emptySquares.length
-    );
+// Stop if there are no empty squares
 if (emptySquares.length === 0) {
     return;
 }
-    let computerMove = emptySquares[randomIndex];
+
+// Choose a random empty square
+let randomIndex = Math.floor(Math.random() * emptySquares.length);
 
     // Place O on the board
     board[computerMove] = "O";
