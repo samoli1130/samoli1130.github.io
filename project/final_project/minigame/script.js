@@ -90,3 +90,107 @@ function openSidebar() {
 function closeSidebar() {
     document.getElementById("mySidebar").style.width = "0";
 }
+
+
+// Find the HTML elements
+const squares = document.querySelectorAll(".square");
+const statusText = document.getElementById("status");
+const resetButton = document.getElementById("resetButton");
+
+// Keep track of whose turn it is
+let currentPlayer = "X";
+
+// Store the game board
+let board = ["", "", "", "", "", "", "", "", ""];
+
+// Check if the game is over
+let gameActive = true;
+
+
+squares.forEach(function(square, index) {
+
+    square.addEventListener("click", function() {
+
+        // Don't allow moves in an occupied square
+        if (board[index] !== "" || !gameActive) {
+            return;
+        }
+
+        // Place the player's symbol
+        board[index] = currentPlayer;
+        square.textContent = currentPlayer;
+
+        // Check for a winner
+        checkWinner();
+
+    });
+
+});
+
+function checkWinner() {
+
+    const winningCombinations = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6]
+    ];
+
+    for (let combination of winningCombinations) {
+
+        const [a, b, c] = combination;
+
+        if (
+            board[a] !== "" &&
+            board[a] === board[b] &&
+            board[a] === board[c]
+        ) {
+
+            statusText.textContent =
+                "Player " + currentPlayer + " Wins!";
+
+            gameActive = false;
+            return;
+        }
+    }
+
+    // Check for a tie
+    if (!board.includes("")) {
+
+        statusText.textContent = "It's a Tie!";
+        gameActive = false;
+        return;
+
+    }
+
+    // Switch players
+    currentPlayer = currentPlayer === "X" ? "O" : "X";
+
+    statusText.textContent =
+        "Player " + currentPlayer + "'s Turn";
+
+}
+
+resetButton.addEventListener("click", function() {
+
+    // Clear the board
+    board = ["", "", "", "", "", "", "", "", ""];
+
+    // Clear the squares
+    squares.forEach(function(square) {
+        square.textContent = "";
+    });
+
+    // Start with Player X
+    currentPlayer = "X";
+
+    // Allow the game to continue
+    gameActive = true;
+
+    statusText.textContent = "Player X's Turn";
+
+});
