@@ -23,7 +23,6 @@ body {
 .gameArea {
     background-color: white;
     padding: 25px;
-    border: 3px solid pink;
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(128, 0, 0, 0.12);
     text-align: center;
@@ -90,7 +89,6 @@ span {
     padding: 0;
     background-color: #F8C8DC;
     color: maroon;
-    border: 2px solid maroon;
     border-radius: 10px;
 }
 
