@@ -147,13 +147,13 @@ board.forEach(function(square, index) {
 if (emptySquares.length === 0) {
     return;
 }
-
 // Choose a random empty square
 let randomIndex = Math.floor(Math.random() * emptySquares.length);
+let computerMove = emptySquares[randomIndex];
 
-    // Place O on the board
-    board[computerMove] = "O";
-    squares[computerMove].textContent = "O";
+// Place O on the board
+board[computerMove] = "O";
+squares[computerMove].textContent = "O";
 
     // Check if computer won
     currentPlayer = "O";
