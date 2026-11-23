@@ -130,3 +130,21 @@ button:disabled {
     text-decoration: none;
     cursor: pointer;
 }
+
+.square {
+    color:#444;
+    background-color:pink;
+   width: 100px;
+    height: 100px;
+    font-size: 40px;
+    cursor: pointer;
+
+}
+
+#game2 {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 5px
+    
+
+}
