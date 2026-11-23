@@ -169,3 +169,84 @@ function closeSidebar() {
     document.getElementById("mySidebar").style.width = "0";
 }
 
+let assignments= [];
+function saveAssignments() {
+    localStorage.setItem(
+        "myAssignments",
+        JSON.stringify(assignments)
+    );
+}
+
+function loadAssignments() {
+
+    const saved = localStorage.getItem("myAssignments");
+
+    if (saved !== null) {
+        assignments = JSON.parse(saved);
+    }
+
+    displayAssignments();
+}
+
+document.getElementById("assignmentForm")
+    .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const date = document.getElementById("dueDate").value;
+        const name = document.getElementById("assignmentName").value;
+        const className = document.getElementById("className").value;
+
+        const newAssignment = {
+            date: date,
+            name: name,
+            className: className,
+            completed: false
+        };
+
+        assignments.push(newAssignment);
+
+        saveAssignments();
+
+        displayAssignments();
+
+        document.getElementById("assignmentForm").reset();
+    });
+
+    function displayAssignments() {
+
+    const checklist = document.getElementById("checklistlist");
+
+    checklist.innerHTML = "";
+
+    assignments.forEach((assignment, index) => {
+
+        const item = document.createElement("div");
+
+        item.innerHTML = `
+            <input
+                type="checkbox"
+                ${assignment.completed ? "checked" : ""}
+                onchange="toggleAssignment(${index})"
+            >
+
+            ${assignment.date} -
+            ${assignment.name} -
+            ${assignment.className}
+        `;
+
+        checklist.appendChild(item);
+    });
+}
+
+function toggleAssignment(index) {
+
+    assignments[index].completed =
+        !assignments[index].completed;
+
+    saveAssignments();
+
+    displayAssignments();
+}
+
+loadAssignments();
