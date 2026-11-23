@@ -145,12 +145,16 @@ button:disabled {
 #status {
     text-align: center;
     margin-bottom: 15px;
+    margin-right:75px;
+    margin-left:auto;
 }
 
 .tic-tac-toe-grid {
     display: grid;
     grid-template-columns: repeat(3, 70px);
-    gap: 5px;
+    gap: 10px;
     justify-content: center;
+    margin-right: 75px;
+    margin-left:auto;
 }
 
