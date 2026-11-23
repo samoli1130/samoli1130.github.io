@@ -145,7 +145,7 @@ button:disabled {
     display: grid;
     grid-template-columns: repeat(3, 100px);
     gap: 5px;
-    margin-right:0;
+    margin-right: 25px;
     margin-left:auto;
 
 
