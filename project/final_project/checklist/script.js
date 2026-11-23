@@ -7,29 +7,30 @@ const assignmentName = document.getElementById("assignmentName");
 const dueDate = document.getElementById("dueDate");
 const className = document.getElementById("className");
 
-// Add a new assignment when the form is submitted
 assignmentForm.addEventListener("submit", function(event) {
 
-    // Prevent the page from refreshing
     event.preventDefault();
 
-    // Check that all required fields are filled in
     if (!assignmentForm.reportValidity()) {
         return;
     }
 
-  const newAssignment = {
-    name: assignmentName.value.trim(),
-    date: dueDate.value,
-    classValue: className.value.trim(),
-    completed: false
-};
+    const newAssignment = {
+        name: assignmentName.value.trim(),
+        date: dueDate.value,
+        classValue: className.value.trim(),
+        completed: false
+    };
 
-assignments.push(newAssignment);
+    assignments.push(newAssignment);
 
-saveAssignments();
+    saveAssignments();
 
-displayAssignments();
+    displayAssignments();
+
+    assignmentForm.reset();
+
+});
 
 function displayAssignments() {
 
@@ -47,12 +48,6 @@ function displayAssignments() {
     });
 
 }
-
-    // Clear the form after adding the assignment
-    assignmentForm.reset();
-
-});
-
 
 // Function to create an assignment
 function createAssignment(name, date, classValue, completed) {
@@ -128,66 +123,58 @@ checkbox.addEventListener("change", function() {
     }
 
     // Edit an assignment
-    editButton.addEventListener("click", function() {
+editButton.addEventListener("click", function() {
 
-        // Ask the user for updated information
-        const newName = prompt(
-            "Edit assignment name:",
-            name
-        );
+    const newName = prompt("Edit assignment name:", name);
 
-        // Cancel editing if Cancel is selected
-        if (newName === null) return;
+    if (newName === null) return;
 
-        const newClass = prompt(
-            "Edit class name:",
-            classValue
-        );
+    const newClass = prompt("Edit class name:", classValue);
 
-        if (newClass === null) return;
+    if (newClass === null) return;
 
-        const newDate = prompt(
-            "Edit due date (YYYY-MM-DD):",
-            date
-        );
+    const newDate = prompt("Edit due date (YYYY-MM-DD):", date);
 
-        if (newDate === null) return;
+    if (newDate === null) return;
 
-        // Make sure the fields are not empty
-        if (
-            newName.trim() === "" ||
-            newClass.trim() === "" ||
-            !/^\d{4}-\d{2}-\d{2}$/.test(newDate) ||
-            Number.isNaN(Date.parse(newDate)) ||
-            new Date(newDate + "T00:00:00").toISOString().slice(0, 10) !== newDate
-        ) {
-            alert("Please enter a valid name and class.");
-            return;
-        }
-const oldName = name;
-const oldClass = classValue;
-const oldDate = date;
-        // Update the assignment information
-        name = newName.trim();
-        classValue = newClass.trim();
-        date = newDate;
+    if (
+        newName.trim() === "" ||
+        newClass.trim() === "" ||
+        !/^\d{4}-\d{2}-\d{2}$/.test(newDate) ||
+        Number.isNaN(Date.parse(newDate)) ||
+        new Date(newDate + "T00:00:00").toISOString().slice(0, 10) !== newDate
+    ) {
+        alert("Please enter a valid name and class.");
+        return;
+    }
 
-        assignmentTitle.textContent = name;
-        classText.textContent = " | Class: " + classValue;
-        dateText.textContent = " | Due Date: " + date;
-const index = assignments.findIndex(function(a) {
-    return a.name === oldName &&
-           a.date === oldDate &&
-           a.classValue === oldClass;
-});
+    const oldName = name;
+    const oldClass = classValue;
+    const oldDate = date;
+
+    name = newName.trim();
+    classValue = newClass.trim();
+    date = newDate;
+
+    assignmentTitle.textContent = name;
+    classText.textContent = " | Class: " + classValue;
+    dateText.textContent = " | Due Date: " + date;
+
+    const index = assignments.findIndex(function(a) {
+        return a.name === oldName &&
+               a.date === oldDate &&
+               a.classValue === oldClass;
     });
-if (index !== -1) {
-    assignments[index].name = name;
-    assignments[index].classValue = classValue;
-    assignments[index].date = date;
 
-    saveAssignments();
-}
+    if (index !== -1) {
+        assignments[index].name = name;
+        assignments[index].classValue = classValue;
+        assignments[index].date = date;
+
+        saveAssignments();
+    }
+
+});
     // Delete an assignment
     deleteButton.addEventListener("click", function() {
 
