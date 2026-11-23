@@ -1,4 +1,4 @@
-
+let assignments = [];
 // Find the HTML elements
 const assignmentForm = document.getElementById("assignmentForm");
 const assignmentList = document.getElementById("assignmentList");
@@ -18,13 +18,35 @@ assignmentForm.addEventListener("submit", function(event) {
         return;
     }
 
-    // Create a new assignment
-    createAssignment(
-        assignmentName.value.trim(),
-        dueDate.value,
-        className.value.trim(),
-        false
-    );
+  const newAssignment = {
+    name: assignmentName.value.trim(),
+    date: dueDate.value,
+    classValue: className.value.trim(),
+    completed: false
+};
+
+assignments.push(newAssignment);
+
+saveAssignments();
+
+displayAssignments();
+
+function displayAssignments() {
+
+    assignmentList.innerHTML = "";
+
+    assignments.forEach(function(assignment) {
+
+        createAssignment(
+            assignment.name,
+            assignment.date,
+            assignment.classValue,
+            assignment.completed
+        );
+
+    });
+
+}
 
     // Clear the form after adding the assignment
     assignmentForm.reset();
@@ -77,18 +99,28 @@ function createAssignment(name, date, classValue, completed) {
     assignmentList.appendChild(listItem);
 
     // Check off an assignment
-    checkbox.addEventListener("change", function() {
+checkbox.addEventListener("change", function() {
 
-        if (checkbox.checked) {
-            listItem.style.textDecoration = "line-through";
-            listItem.style.opacity = "0.5";
-        } else {
-            listItem.style.textDecoration = "none";
-            listItem.style.opacity = "1";
-        }
+    if (checkbox.checked) {
+        listItem.style.textDecoration = "line-through";
+        listItem.style.opacity = "0.5";
+    } else {
+        listItem.style.textDecoration = "none";
+        listItem.style.opacity = "1";
+    }
 
+    const index = assignments.findIndex(function(a) {
+        return a.name === name &&
+               a.date === date &&
+               a.classValue === classValue;
     });
 
+    if (index !== -1) {
+        assignments[index].completed = checkbox.checked;
+        saveAssignments();
+    }
+
+});
     // Apply completed appearance if already completed
     if (completed) {
         listItem.style.textDecoration = "line-through";
@@ -132,7 +164,9 @@ function createAssignment(name, date, classValue, completed) {
             alert("Please enter a valid name and class.");
             return;
         }
-
+const oldName = name;
+const oldClass = classValue;
+const oldDate = date;
         // Update the assignment information
         name = newName.trim();
         classValue = newClass.trim();
@@ -141,9 +175,19 @@ function createAssignment(name, date, classValue, completed) {
         assignmentTitle.textContent = name;
         classText.textContent = " | Class: " + classValue;
         dateText.textContent = " | Due Date: " + date;
-
+const index = assignments.findIndex(function(a) {
+    return a.name === oldName &&
+           a.date === oldDate &&
+           a.classValue === oldClass;
+});
     });
+if (index !== -1) {
+    assignments[index].name = name;
+    assignments[index].classValue = classValue;
+    assignments[index].date = date;
 
+    saveAssignments();
+}
     // Delete an assignment
     deleteButton.addEventListener("click", function() {
 
@@ -151,10 +195,22 @@ function createAssignment(name, date, classValue, completed) {
             "Are you sure you want to delete this assignment?"
         );
 
-        if (confirmDelete) {
-            listItem.remove();
-        }
+     if (confirmDelete) {
 
+    const index = assignments.findIndex(function(a) {
+        return a.name === name &&
+               a.date === date &&
+               a.classValue === classValue;
+    });
+
+    if (index !== -1) {
+        assignments.splice(index, 1);
+    }
+
+    saveAssignments();
+
+    listItem.remove();
+}
     });
 
 }
@@ -168,15 +224,18 @@ function openSidebar() {
 function closeSidebar() {
     document.getElementById("mySidebar").style.width = "0";
 }
-
-let assignments= [];
+// SAVE ASSIGNMENTS
 function saveAssignments() {
+
     localStorage.setItem(
         "myAssignments",
         JSON.stringify(assignments)
     );
+
 }
 
+
+// LOAD ASSIGNMENTS
 function loadAssignments() {
 
     const saved = localStorage.getItem("myAssignments");
@@ -185,7 +244,10 @@ function loadAssignments() {
         assignments = JSON.parse(saved);
     }
 
-    createAssignment()
+    displayAssignments();
+
 }
 
+
+// LOAD WHEN WEBSITE OPENS
 loadAssignments();
