@@ -111,21 +111,63 @@ squares.forEach(function(square, index) {
 
     square.addEventListener("click", function() {
 
-        // Don't allow moves in an occupied square
+        // Don't allow clicking occupied squares
         if (board[index] !== "" || !gameActive) {
             return;
         }
 
-        // Place the player's symbol
-        board[index] = currentPlayer;
-        square.textContent = currentPlayer;
+        // Player makes a move
+        board[index] = "X";
+        square.textContent = "X";
 
-        // Check for a winner
+        // Check if player won
+        currentPlayer = "X";
         checkWinner();
+
+        // If game is still active, computer plays
+        if (gameActive) {
+            computerTurn();
+        }
 
     });
 
 });
+
+function computerTurn() {
+
+    // Find all empty squares
+    let emptySquares = [];
+
+    board.forEach(function(square, index) {
+
+        if (square === "") {
+            emptySquares.push(index);
+        }
+
+    });
+
+    // Choose a random empty square
+    let randomIndex = Math.floor(
+        Math.random() * emptySquares.length
+    );
+
+    let computerMove = emptySquares[randomIndex];
+
+    // Place O on the board
+    board[computerMove] = "O";
+    squares[computerMove].textContent = "O";
+
+    // Check if computer won
+    currentPlayer = "O";
+    checkWinner();
+
+    // If nobody won, return turn to player
+    if (gameActive) {
+        currentPlayer = "X";
+        statusText.textContent = "Your Turn (X)";
+    }
+
+}
 
 function checkWinner() {
 
@@ -191,6 +233,5 @@ resetButton.addEventListener("click", function() {
     // Allow the game to continue
     gameActive = true;
 
-    statusText.textContent = "Player X's Turn";
-
+statusText.textContent = "Your Turn (X)";
 });
