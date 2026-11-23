@@ -162,7 +162,6 @@ squares[computerMove].textContent = "O";
     // If nobody won, return turn to player
     if (gameActive) {
         currentPlayer = "X";
-        statusText.textContent = "Your Turn (X)";
     }
 
 }
@@ -210,6 +209,4 @@ function checkWinner() {
 
     }
 
-    // Keep the player informed
-    statusText.textContent = "Your Turn (X)";
 }
