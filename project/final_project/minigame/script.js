@@ -150,7 +150,9 @@ function computerTurn() {
     let randomIndex = Math.floor(
         Math.random() * emptySquares.length
     );
-
+if (emptySquares.length === 0) {
+    return;
+}
     let computerMove = emptySquares[randomIndex];
 
     // Place O on the board
@@ -192,8 +194,11 @@ function checkWinner() {
             board[a] === board[c]
         ) {
 
-            statusText.textContent =
-                "Player " + currentPlayer + " Wins!";
+            if (currentPlayer === "X") {
+                statusText.textContent = "You Win!";
+            } else {
+                statusText.textContent = "Computer Wins!";
+            }
 
             gameActive = false;
             return;
@@ -209,29 +214,6 @@ function checkWinner() {
 
     }
 
-    // Switch players
-    currentPlayer = currentPlayer === "X" ? "O" : "X";
-
-    statusText.textContent =
-        "Player " + currentPlayer + "'s Turn";
-
+    // Keep the player informed
+    statusText.textContent = "Your Turn (X)";
 }
-
-resetButton.addEventListener("click", function() {
-
-    // Clear the board
-    board = ["", "", "", "", "", "", "", "", ""];
-
-    // Clear the squares
-    squares.forEach(function(square) {
-        square.textContent = "";
-    });
-
-    // Start with Player X
-    currentPlayer = "X";
-
-    // Allow the game to continue
-    gameActive = true;
-
-statusText.textContent = "Your Turn (X)";
-});

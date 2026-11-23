@@ -144,7 +144,9 @@ button:disabled {
 #game2 {
     display: grid;
     grid-template-columns: repeat(3, 100px);
-    gap: 5px
-    
+    gap: 5px;
+    margin-right:0;
+    margin-left:auto;
+
 
 }
