@@ -1,65 +1,82 @@
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
     <title>minigame site</title>
     <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+</head>
+
+<body>
+
+    <!-- Container holding both games -->
+    <div class="games-container">
+
+        <!-- GAME 1: CAT CATCHER -->
         <div id="game1" class="gameArea">
-        <header>
-            <h1>Cat Catcher</h1>
-            <div class="hud">
-                <h2>Time: <span id="time-display">10</span></h2>
-                <h2>Score: <span id="score-display">0</span></h2>
+            <header>
+                <h1>Cat Catcher</h1>
+
+                <div class="hud">
+                    <h2>Time: <span id="time-display">10</span></h2>
+                    <h2>Score: <span id="score-display">0</span></h2>
+                </div>
+
+                <button id="start-btn" onclick="startGame()">Start Drill</button>
+            </header>
+
+            <main id="game-board">
+                <div id="target" onclick="hitTarget()">🐈</div>
+                <div id="bomb" onclick="hitBomb()">💣</div>
+            </main>
+        </div>
+
+        <!-- GAME 2: TIC TAC TOE -->
+        <div class="gameArea" id="game2">
+
+            <h1>Tic Tac Toe</h1>
+
+            <h2 id="status">Your Turn (X)</h2>
+
+            <div class="tic-tac-toe-grid">
+                <button class="square"></button>
+                <button class="square"></button>
+                <button class="square"></button>
+
+                <button class="square"></button>
+                <button class="square"></button>
+                <button class="square"></button>
+
+                <button class="square"></button>
+                <button class="square"></button>
+                <button class="square"></button>
             </div>
-            <button id="start-btn" onclick="startGame()">Start Drill</button>
-        </header>
-        <main id="game-board">
-            <div id="target" onclick="hitTarget()"> 🐈 </div>
-            <div id="bomb" onclick="hitBomb()">💣</div>
-        </main>
+
+            <button id="resetButton">Restart Game</button>
+
+        </div>
+
     </div>
-<div class="gameArea" id="game2">
-
-    <h2 id="status">Your Turn (X)</h2>
-
-    <h1>Tic Tac Toe</h1>
-
-    <div class="tic-tac-toe-grid">
-        <button class="square"></button>
-        <button class="square"></button>
-        <button class="square"></button>
-
-        <button class="square"></button>
-        <button class="square"></button>
-        <button class="square"></button>
-
-        <button class="square"></button>
-        <button class="square"></button>
-        <button class="square"></button>
-    </div>
-
-    <button id="resetButton">Restart Game</button>
-
-</div>
+    <!-- End of games-container -->
 
 
-      <!-- Three-bar menu button -->
+    <!-- MENU BUTTON -->
     <button class="menu-btn" onclick="openSidebar()">☰</button>
 
-    <!-- Sidebar -->
+    <!-- SIDEBAR -->
     <div id="mySidebar" class="sidebar">
 
-        <!-- Close button -->
         <a href="javascript:void(0)" class="close-btn"
            onclick="closeSidebar()">×</a>
 
-        <!-- Three links -->
         <a href="https://samoli1130.github.io/project/final_project/index.html">Home</a>
+
         <a href="https://samoli1130.github.io/project/final_project/studypage/">Study Page</a>
+
         <a href="https://samoli1130.github.io/project/final_project/minigame/">Mini Game</a>
 
     </div>
-        <script src="script.js"></script>
-    </body>
+
+    <script src="script.js"></script>
+
+</body>
 </html>
