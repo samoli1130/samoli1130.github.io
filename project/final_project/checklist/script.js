@@ -185,6 +185,7 @@ function loadAssignments() {
         assignments = JSON.parse(saved);
     }
 
+    createAssignment()
 }
 
 loadAssignments();
