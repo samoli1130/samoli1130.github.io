@@ -141,24 +141,16 @@ button:disabled {
 
 }
 
-#game2 {
- text-align:center;
-    margin-right: 85px;
-    margin-left:auto;
+
+#status {
+    text-align: center;
     margin-bottom: 15px;
-
-
 }
 
-h1 {
-    margin-right:85px;
-    font-size: X-large;
-}
-
-.tictactoegrid {
+.tic-tac-toe-grid {
     display: grid;
-    grid-template-columns: repeat(3, 100px);
+    grid-template-columns: repeat(3, 70px);
     gap: 5px;
-    margin-right: 85px;
-    margin-left:auto;
+    justify-content: center;
 }
+
