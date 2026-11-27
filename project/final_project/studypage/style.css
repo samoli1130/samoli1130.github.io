@@ -1,3 +1,11 @@
+body {
+    color: rgb(68, 68, 68);
+    background-color:#FFF0F5;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: larger;
+}
+
 
 /* Three-bar menu button */
 .menu-btn {
@@ -52,3 +60,11 @@
     cursor: pointer;
 }
 
+.timerBox {
+    color:#444;
+    background-color:pink;
+    padding: 10px;
+    border-radius: 20px;
+    border: white;
+    align-content: center;
+}
