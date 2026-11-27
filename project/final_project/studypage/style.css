@@ -9,7 +9,7 @@ body {
 .timer-stopwatch-column {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 35px;
     flex: 1;
 
 }
@@ -70,12 +70,12 @@ body {
 #timerBox {
     color:#444;
     background-color: pink;
-    padding: 15px;
+    padding: 25px;
     border-radius:20px;
     border: white;
     align-content: center;
-    width: 200px;
-    margin: 0;
+    width: 250px;
+    margin-left: 135px;
 }
 
 button {
@@ -91,12 +91,12 @@ button:hover {
 #stopwatch-container {
     color:#444;
     background-color: pink;
-    padding: 15px;
+    padding: 25px;
     border-radius:20px;
     border: white;
     align-content: center;
-    width: 200px;
-    margin: 0;
+    width: 250px;
+    margin-left:135px;
 }
 
 
@@ -104,14 +104,14 @@ button:hover {
 
 .music-container {
     background-color: white;
-    padding: 25px;
+    padding: 50px;
     border: 3px solid pink;
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(128, 0, 0, 0.12);
-    width: 350px;
+    width: 500px;
     max-width: 100%;
     box-sizing: border-box;
-    margin: 0 ;
+    margin-right: 155px;
 }
 /* Album cover */
 #music-cover {
