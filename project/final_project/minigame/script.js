@@ -1,7 +1,6 @@
 
-// ==========================================
 // GAME 1: CAT CATCHER
-// ==========================================
+
 
 let score = 0;
 let timeLeft = 10;
@@ -107,14 +106,13 @@ function endGame() {
 }
 
 
-
+//SIDEBAR
 function openSidebar() {
 
     document.getElementById("mySidebar").style.width = "250px";
 
 }
 
-// Close the sidebar
 function closeSidebar() {
 
     document.getElementById("mySidebar").style.width = "0";
@@ -122,9 +120,7 @@ function closeSidebar() {
 }
 
 
-// ==========================================
 // GAME 2: TIC TAC TOE
-// ==========================================
 
 const squares = document.querySelectorAll(".square");
 const statusText = document.getElementById("status");

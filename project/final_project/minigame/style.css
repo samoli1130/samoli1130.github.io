@@ -32,6 +32,7 @@ body {
     min-height: 450px;
     box-sizing: border-box;
 }
+
 /* GAME 1: CAT CATCHER */
 header {
     margin-bottom: 20px;
@@ -112,6 +113,7 @@ button:disabled {
     cursor: not-allowed;
 }
 
+/*Menu*/
 .menu-btn {
     position: fixed;
     top: 20px;
