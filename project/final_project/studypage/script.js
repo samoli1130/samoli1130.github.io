@@ -226,31 +226,31 @@ const musicPlaylist = [
     {
         title: "Lofi Study",
         song: "music/LofiStudy.mp3",
-        cover: "images/cover1.jpg"
+        cover: "images/Library.jpg"
     },
 
     {
         title: "Cafe Jazz Coffee Shop",
         song: "music/CafeJazzCoffeeShop.mp3",
-        cover: "images/cover2.jpg"
+        cover: "images/SheetMusic.jpg"
     },
 
     {
         title: "Laid Back Cafe Beat",
         song: "music/LaidBackCafe.mp3",
-        cover: "images/cover3.jpg"
+        cover: "images/PinkBooks.jpg"
     },
 
        {
         title: "Jazz Cafe Relaxing Smooth Cozy Ambience Podcast",
         song: "music/MusicJazzPodcast.mp3",
-        cover: "images/cover3.jpg"
+        cover: "images/RainyImage.jpg"
     },
 
 {
         title: "Study Music",
         song: "music/StudyMusicMountain.mp3",
-        cover: "images/cover3.jpg"
+        cover: "images/OpenBook.jpg"
     }
 
 
