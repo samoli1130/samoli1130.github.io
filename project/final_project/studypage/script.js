@@ -204,3 +204,6 @@ stopwatchPause.addEventListener("click", pauseStopwatch);
 stopwatchReset.addEventListener("click", resetStopwatch);
 
 updateStopwatchDisplay();
+
+
+
