@@ -6,6 +6,13 @@ body {
     font-size: larger;
 }
 
+.timer-stopwatch-column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    flex: 1;
+
+}
 
 /* Three-bar menu button */
 .menu-btn {
@@ -67,11 +74,10 @@ body {
     border-radius:20px;
     border: white;
     align-content: center;
-    margin-left: 25px ;
-    margin-right: auto;
-    margin-top: 25px;
+    margin: 20px auto;
     width: 200px;
-    height: 220px;
+  margin: 0;
+    width: 100%;
 }
 
 button {
@@ -93,11 +99,8 @@ button:hover {
     align-content: center;
     margin: 20px auto;
     width: 200px;
-    margin-left: 25px ;
-    margin-right: auto;
-    margin-top: 60px;
-    width: 200px;
-    height: 220px;
+  margin: 0;
+    width: 100%;
 }
 
 
@@ -112,7 +115,7 @@ button:hover {
     width: 350px;
     max-width: 100%;
     box-sizing: border-box;
-    margin: 30px auto;
+    margin: 0 ;
 }
 
 /* Album cover */
