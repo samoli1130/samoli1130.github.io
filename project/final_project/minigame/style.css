@@ -17,13 +17,13 @@ body {
     gap: 30px;
     width: 100%;
     min-height: 85vh;
-    box-sizing: border-box;
+    box-sizing: border-boxbox;
 }
 
 .gameArea {
     background-color: white;
-    padding: 25px;
-    border-radius: 20px;
+    padding: 10px;
+    border-radius: 10px;
     box-shadow: 0 5px 15px rgba(128, 0, 0, 0.12);
     text-align: center;
     flex: 1;
@@ -41,7 +41,7 @@ header {
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
 }
 
 span {
@@ -51,8 +51,8 @@ span {
 #game-board {
     background-color: pink;
     width: 100%;
-    max-width: 600px;
-    height: 350px;
+    max-width: 650px;
+    height: 400px;
     margin: auto;
     border: 5px solid white;
     border-radius: 12px;
@@ -111,7 +111,7 @@ button:disabled {
     background-color: gray;
     cursor: not-allowed;
 }
-/* Three-bar menu button */
+
 .menu-btn {
     position: fixed;
     top: 20px;
@@ -124,7 +124,6 @@ button:disabled {
     z-index: 1001;
 }
 
-/* Sidebar */
 .sidebar {
     height: 100%;
     width: 0;
@@ -138,7 +137,6 @@ button:disabled {
     z-index: 1000;
 }
 
-/* Sidebar links */
 .sidebar a {
     display: block;
     padding: 15px 25px;
@@ -148,12 +146,10 @@ button:disabled {
     transition: 0.2s;
 }
 
-/* Hover effect */
 .sidebar a:hover {
     background-color: #444;
 }
 
-/* Close button */
 .close-btn {
     position: absolute;
     top: 10px;

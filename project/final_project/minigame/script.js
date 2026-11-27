@@ -116,11 +116,7 @@ function endGame() {
 }
 
 
-// ==========================================
-// SIDEBAR
-// ==========================================
 
-// Open the sidebar
 function openSidebar() {
 
     document.getElementById("mySidebar").style.width = "250px";
