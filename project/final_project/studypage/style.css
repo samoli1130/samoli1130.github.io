@@ -60,11 +60,13 @@ body {
     cursor: pointer;
 }
 
-.timerBox {
+#timerBox {
     color:#444;
-    background-color:pink;
-    padding: 10px;
-    border-radius: 20px;
+    background-color: pink;
+    padding: 15px;
+    border-radius:20px;
     border: white;
     align-content: center;
+    margin: 20px auto;
+    width: 200px;
 }
