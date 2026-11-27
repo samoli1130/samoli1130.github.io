@@ -18,6 +18,62 @@ function updateDisplay() {
     String(minutes).padStart(2, "0") + ":" + String(seconds).padStart(2, "0");
 }
 
+function playTimerSound() {
+
+    const audioContext = new AudioContext();
+
+    const oscillator = audioContext.createOscillator();
+
+    const gain = audioContext.createGain();
+
+    oscillator.connect(gain);
+    gain.connect(audioContext.destination);
+
+    oscillator.frequency.value = 800;
+    oscillator.type = "sine";
+
+    gain.gain.value = 0.3;
+
+    oscillator.start();
+
+    oscillator.stop(audioContext.currentTime + 1);
+
+}
+
+
+function showTimerNotification() {
+
+    if ("Notification" in window) {
+
+        if (Notification.permission === "granted") {
+
+            new Notification("Timer Finished!", {
+                body: "Your countdown has reached zero!"
+            });
+
+        }
+
+        else if (Notification.permission !== "denied") {
+
+            Notification.requestPermission().then(function(permission) {
+
+                if (permission === "granted") {
+
+                    new Notification("Timer Finished!", {
+                        body: "Your countdown has reached zero!"
+                    });
+
+                }
+
+            });
+
+        }
+
+    }
+
+}
+
+
 function startTimer() 
 {
     if (timerInterval !== null) {
@@ -51,9 +107,15 @@ function startTimer()
         updateDisplay();
 
         if (timeLeft <= 0) {
-            clearInterval(timerInterval);
-            timerInterval = null;
-            alert("Time's up!");
+
+    clearInterval(timerInterval);
+    timerInterval = null;
+
+    playTimerSound();
+
+    showTimerNotification();
+
+    alert("Time's up!");
         }
 
     }, 1000);
