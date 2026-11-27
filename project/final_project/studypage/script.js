@@ -1,57 +1,77 @@
-let timeLeft= 0;
-let timeInterval= nul; 
+const minutesInput = document.getElementById("minutes");
+const secondsInput = document.getElementById("seconds");
+const timperDisplay = document.getElementById("timerDisplay");
 
-function updateDisplay () {
-    let minutes= Math.floor(timeLeft / 60);
+const startButton = document.getElementById("start-btn");
+const resetButton = document.getElementById("reset-btn");
+const pauseButton = document.getElementById("pause-btn");
+
+let timeLeft = 0;
+let originalTime = 0;
+let timeInterval= null;
+
+function updateDisplay() {
+    let minutes = Math.floor(timeLeft/60);
     let seconds = timeLeft % 60;
 
-    document.getElementById("timer").textContent =
-        String(minutes).padStart( 2, "0") + ":" +
-        String(seconds).padStart(2, "0");
+    timerDisplay.textContent = 
+    String(minutes).padStart(2, "0") + ":" + String(seconds).padStart(2, "0");
 }
 
-function startTimer(){
-    if (timerInterval !== null) return;
-
-    if (timeLeft === 0) {
-        let input= document.getElementById("minutes").value;
-        timeLeft = Number(input) * 60;
-
-         if (timeLeft <= 0) return;
-
+startTimer() 
+{
+    if (timerInterval !== null) {
+        return;
     }
 
-    timerInterval = setInterval(function() {
-    timeLeft--;
- updateDisplay();
+    if (timeLeft === 0) {
+        let minutes= Number(minutesInput.value);
+        let seconds = Number(secondsInput.value);
 
-        if (timeLeft <= 0) 
-            {
+        if (
+            !Number.isInteger(minutes) ||
+            !Number.isInteger(seconds) ||
+            minutes < 0 ||
+            seconds < 0 ||
+            seconds > 59 ||
+            (minutes === 0 && seconds === 0)
+        ){
+            alert("Please enter a time");
+            return;
+        }
+    }
+      timerInterval = setInterval(function() {
+
+        timeLeft--;
+
+        updateDisplay();
+
+        if (timeLeft <= 0) {
             clearInterval(timerInterval);
             timerInterval = null;
             alert("Time's up!");
         }
+
     }, 1000);
-
-    
 }
 
-function resetTimer()
-{
-
+function pauseTimer() {
+    clearInterval(timerInterval);
+    timerInterval = null;
 }
 
-function pauseTimer() 
-{
-
+function resetTimer(){
+    clearInterval(timerInterval);
+     timerInterval = null; 
+     timeLeft = originalTime; 
+     updateDisplay();
 }
 
-// Open the sidebar
-function openSidebar() {
-    document.getElementById("mySidebar").style.width = "250px";
-}
 
-// Close the sidebar
-function closeSidebar() {
-    document.getElementById("mySidebar").style.width = "0";
-}
+startButton.addEventListener("click", startTimer);
+
+pauseButton.addEventListener("click", pauseTimer);
+
+resetButton.addEventListener("click", resetTimer);
+
+updateDisplay();
