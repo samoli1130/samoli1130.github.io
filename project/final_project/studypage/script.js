@@ -67,7 +67,8 @@ function pauseTimer() {
 function resetTimer(){
     clearInterval(timerInterval);
      timerInterval = null; 
-     timeLeft = originalTime; 
+     timeLeft = 0;
+     originalTime = 0;
      updateDisplay();
 }
 
