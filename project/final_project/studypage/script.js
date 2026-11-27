@@ -178,19 +178,26 @@ function startStopwatch() {
     }, 10);
 }
 
-function stopwatchPause() {
+function pauseStopwatch() {
+
     clearInterval(stopwatchInterval);
+
     stopwatchInterval = null;
 
 }
 
-function stopwatchReset () {
+function resetStopwatch() {
+
     clearInterval(stopwatchInterval);
+
     stopwatchInterval = null;
+
     stopwatchTime = 0;
+
     updateStopwatchDisplay();
 
 }
+
 
 stopwatchStart.addEventListener("click", startStopwatch);
 
