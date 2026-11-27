@@ -80,3 +80,60 @@ pauseButton.addEventListener("click", pauseTimer);
 resetButton.addEventListener("click", resetTimer);
 
 updateDisplay();
+
+
+
+const stopwatchDisplay = document.getElementById("stopwatch-display");
+const stopwatchStart = document.getElementById("stopwatch-start");
+const stopwatchPause = document.getElementById("stopwatch-pause");
+const stopwatchReset = document.getElementById("stopwatch-reset");
+
+let stopwatchTime = 0;
+let stopwatchInterval = null; 
+let stopwatchStartTime= 0;
+
+function updateStopwatchDisplay() {
+    let minutes = Math.floor(stopwatchTime / 60000);
+    let seconds = Math.floor((stopwatchTime % 60000) / 1000);
+    let milliseconds = Math.floor((stopwatchTime % 1000) / 10);
+
+    stopwatchDisplay.textContent =
+    string(minutes).padStart (2, "0") + ":" +
+    string(seconds).padStart (2, "0") + ":" + 
+    string(milliseconds).padStart (2, "0");
+
+}
+
+function startStopwatch() {
+    if (stopwatchInterval !== null) {
+        restart;
+    }
+
+    stopwatchStartTime = Date.now() - stopwatchTime;
+    stopwatchInterval = setInterval(function(){
+        stopwatchTime=Date.now()-stopwatchStartTime;
+        updateStopwatchDisplay();
+    }, 10);
+}
+
+function stopwatchPause() {
+    clearInterval(stopwatchInterval);
+    stopwatchInterval = null;
+
+}
+
+function stopwatchReset () {
+    clearInterval(stopwatchInterval);
+    stopwatchInterval = null;
+    stopwatchTime = 0;
+    updateStopwatchDisplay();
+
+}
+
+stopwatchStart.addEventListener("click", startStopwatch);
+
+stopwatchPause.addEventListener("click", pauseStopwatch);
+
+stopwatchReset.addEventListener("click", resetStopwatch);
+
+updateStopwatchDisplay();
