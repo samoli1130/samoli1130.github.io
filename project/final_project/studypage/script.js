@@ -1,6 +1,6 @@
 const minutesInput = document.getElementById("minutes");
 const secondsInput = document.getElementById("seconds");
-const timperDisplay = document.getElementById("timerDisplay");
+const timerDisplay = document.getElementById("timerDisplay");
 
 const startButton = document.getElementById("start-btn");
 const resetButton = document.getElementById("reset-btn");
@@ -8,7 +8,7 @@ const pauseButton = document.getElementById("pause-btn");
 
 let timeLeft = 0;
 let originalTime = 0;
-let timeInterval= null;
+let timerInterval= null;
 
 function updateDisplay() {
     let minutes = Math.floor(timeLeft/60);
@@ -18,11 +18,12 @@ function updateDisplay() {
     String(minutes).padStart(2, "0") + ":" + String(seconds).padStart(2, "0");
 }
 
-startTimer() 
+function startTimer() 
 {
     if (timerInterval !== null) {
         return;
     }
+    
 
     if (timeLeft === 0) {
         let minutes= Number(minutesInput.value);
@@ -38,7 +39,10 @@ startTimer()
         ){
             alert("Please enter a time");
             return;
+
         }
+         timeLeft = (minutes * 60) + seconds;
+        originalTime = timeLeft;
     }
       timerInterval = setInterval(function() {
 
