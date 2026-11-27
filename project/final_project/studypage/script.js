@@ -157,12 +157,10 @@ let stopwatchStartTime= 0;
 function updateStopwatchDisplay() {
     let minutes = Math.floor(stopwatchTime / 60000);
     let seconds = Math.floor((stopwatchTime % 60000) / 1000);
-    let milliseconds = Math.floor((stopwatchTime % 1000) / 10);
 
     stopwatchDisplay.textContent =
     String(minutes).padStart(2, "0") + ":" +
     String(seconds).padStart(2, "0") + "." +
-    String(milliseconds).padStart(2, "0");
 
 }
 

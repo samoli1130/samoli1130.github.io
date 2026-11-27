@@ -67,7 +67,7 @@ body {
     border-radius:20px;
     border: white;
     align-content: center;
-    margin-left: 10px ;
+    margin-left: 25px ;
     margin-right: auto;
     margin-top: 25px;
     width: 200px;
@@ -85,7 +85,7 @@ button:hover {
 }
 
 #stopwatch-container {
-      color:#444;
+    color:#444;
     background-color: pink;
     padding: 15px;
     border-radius:20px;
@@ -93,7 +93,7 @@ button:hover {
     align-content: center;
     margin: 20px auto;
     width: 200px;
-    margin-left: 10px ;
+    margin-left: 25px ;
     margin-right: auto;
     margin-top: 60px;
     width: 200px;
