@@ -243,7 +243,7 @@ const musicPlaylist = [
 
        {
         title: "Jazz Cafe Relaxing Smooth Cozy Ambience Podcast",
-        song: "music/MusicJazzPodcast.mp3",
+        song: "music/denis-pavlov-music-jazz-cafe-relaxing-smooth-cozy-ambience-podcast-484681.mp3",
         cover: "images/RainyImage.jpg"
     },
 
