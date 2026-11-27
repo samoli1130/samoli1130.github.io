@@ -1,3 +1,4 @@
+// TIMER
 const minutesInput = document.getElementById("minutes");
 const secondsInput = document.getElementById("seconds");
 const timerDisplay = document.getElementById("timerDisplay");
@@ -144,7 +145,7 @@ resetButton.addEventListener("click", resetTimer);
 updateDisplay();
 
 
-
+//STOPWATCH
 const stopwatchDisplay = document.getElementById("stopwatch-display");
 const stopwatchStart = document.getElementById("stopwatch-start");
 const stopwatchPause = document.getElementById("stopwatch-pause");
@@ -206,8 +207,7 @@ stopwatchReset.addEventListener("click", resetStopwatch);
 updateStopwatchDisplay();
 
 
-
-// Get music player elements
+//MUSIC
 const studyAudio = document.getElementById("study-audio");
 const musicCover = document.getElementById("music-cover");
 const musicTitle = document.getElementById("music-title");
@@ -301,18 +301,14 @@ function forwardMusic() {
 
 function nextSong() {
 
-    // Move to the next song
     currentSongIndex++;
 
-    // Go back to the first song if we reach the end
     if (currentSongIndex >= musicPlaylist.length) {
         currentSongIndex = 0;
     }
 
-    // Load the new song
     loadSong(currentSongIndex);
 
-    // Start playing it
     playMusic();
 
 }
@@ -345,12 +341,11 @@ loadSong(currentSongIndex);
 studyAudio.addEventListener("ended", nextSong);
 
 
-// Open the sidebar
+//SIDE BAR
 function openSidebar() {
     document.getElementById("mySidebar").style.width = "250px";
 }
 
-// Close the sidebar
 function closeSidebar() {
     document.getElementById("mySidebar").style.width = "0";
 }

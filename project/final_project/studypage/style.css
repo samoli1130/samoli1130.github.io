@@ -14,7 +14,6 @@ body {
 
 }
 
-/* Three-bar menu button */
 .menu-btn {
     position: fixed;
     top: 20px;
@@ -27,7 +26,6 @@ body {
     z-index: 1001;
 }
 
-/* Sidebar */
 .sidebar {
     height: 100%;
     width: 0;
@@ -41,7 +39,6 @@ body {
     z-index: 1000;
 }
 
-/* Sidebar links */
 .sidebar a {
     display: block;
     padding: 15px 25px;
@@ -51,12 +48,10 @@ body {
     transition: 0.2s;
 }
 
-/* Hover effect */
 .sidebar a:hover {
     background-color: #444;
 }
 
-/* Close button */
 .close-btn {
     position: absolute;
     top: 10px;
@@ -100,8 +95,6 @@ button:hover {
 }
 
 
-/* MUSIC PLAYER */
-
 .music-container {
     background-color: white;
     padding: 50px;
@@ -113,7 +106,6 @@ button:hover {
     box-sizing: border-box;
     margin-right: 155px;
 }
-/* Album cover */
 #music-cover {
     width: 220px;
     height: 220px;
@@ -123,13 +115,11 @@ button:hover {
     display: block;
 }
 
-/* Song title */
 #music-title {
     color: maroon;
     font-size: 22px;
 }
 
-/* Music buttons */
 .music-buttons,
 .music-navigation {
     display: flex;
