@@ -1,5 +1,4 @@
 let assignments = [];
-// Find the HTML elements
 const assignmentForm = document.getElementById("assignmentForm");
 const assignmentList = document.getElementById("assignmentList");
 
@@ -49,40 +48,31 @@ function displayAssignments() {
 
 }
 
-// Function to create an assignment
 function createAssignment(name, date, classValue, completed) {
 
-    // Create a new list item
     const listItem = document.createElement("li");
 
-    // Create the checkbox
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.checked = completed;
 
-    // Create the assignment name
     const assignmentTitle = document.createElement("strong");
     assignmentTitle.textContent = name;
 
-    // Create the class information
     const classText = document.createElement("span");
     classText.textContent = " | Class: " + classValue;
 
-    // Create the due date information
     const dateText = document.createElement("span");
     dateText.textContent = " | Due Date: " + date;
 
-    // Create the Edit button
     const editButton = document.createElement("button");
     editButton.type = "button";
     editButton.textContent = "Edit";
 
-    // Create the Delete button
     const deleteButton = document.createElement("button");
     deleteButton.type = "button";
     deleteButton.textContent = "Delete";
 
-    // Add all elements to the assignment
     listItem.appendChild(checkbox);
     listItem.appendChild(assignmentTitle);
     listItem.appendChild(classText);
@@ -90,10 +80,8 @@ function createAssignment(name, date, classValue, completed) {
     listItem.appendChild(editButton);
     listItem.appendChild(deleteButton);
 
-    // Add the assignment to the checklist
     assignmentList.appendChild(listItem);
 
-    // Check off an assignment
 checkbox.addEventListener("change", function() {
 
     if (checkbox.checked) {
@@ -116,13 +104,12 @@ checkbox.addEventListener("change", function() {
     }
 
 });
-    // Apply completed appearance if already completed
     if (completed) {
         listItem.style.textDecoration = "line-through";
         listItem.style.opacity = "0.5";
     }
 
-    // Edit an assignment
+    // EDIT
 editButton.addEventListener("click", function() {
 
     const newName = prompt("Edit assignment name:", name);
@@ -175,7 +162,7 @@ editButton.addEventListener("click", function() {
     }
 
 });
-    // Delete an assignment
+//DELETE
     deleteButton.addEventListener("click", function() {
 
         const confirmDelete = confirm(
@@ -202,16 +189,16 @@ editButton.addEventListener("click", function() {
 
 }
 
-// Open the sidebar
 function openSidebar() {
     document.getElementById("mySidebar").style.width = "250px";
 }
 
-// Close the sidebar
 function closeSidebar() {
     document.getElementById("mySidebar").style.width = "0";
 }
-// SAVE ASSIGNMENTS
+
+
+//SAVE
 function saveAssignments() {
 
     localStorage.setItem(
@@ -222,7 +209,6 @@ function saveAssignments() {
 }
 
 
-// LOAD ASSIGNMENTS
 function loadAssignments() {
 
     const saved = localStorage.getItem("myAssignments");
@@ -236,5 +222,4 @@ function loadAssignments() {
 }
 
 
-// LOAD WHEN WEBSITE OPENS
 loadAssignments();
