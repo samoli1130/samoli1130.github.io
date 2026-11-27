@@ -207,3 +207,139 @@ updateStopwatchDisplay();
 
 
 
+// Get music player elements
+const studyAudio = document.getElementById("study-audio");
+const musicCover = document.getElementById("music-cover");
+const musicTitle = document.getElementById("music-title");
+const musicPlay = document.getElementById("music-play");
+const musicPause = document.getElementById("music-pause");
+const musicBack = document.getElementById("music-back");
+const musicForward = document.getElementById("music-forward");
+const musicNext = document.getElementById("music-next");
+const musicPrevious = document.getElementById("music-previous");
+
+let currentSongIndex = 0;
+
+
+const musicPlaylist = [
+
+    {
+        title: "Lofi Study",
+        song: "music/LofiStudy.mp3",
+        cover: "images/cover1.jpg"
+    },
+
+    {
+        title: "Cafe Jazz Coffee Shop",
+        song: "music/CafeJazzCoffeeShop.mp3",
+        cover: "images/cover2.jpg"
+    },
+
+    {
+        title: "Laid Back Cafe Beat",
+        song: "music/LaidBackCafe.mp3",
+        cover: "images/cover3.jpg"
+    },
+
+       {
+        title: "Jazz Cafe Relaxing Smooth Cozy Ambience Podcast",
+        song: "music/MusicJazzPodcast.mp3",
+        cover: "images/cover3.jpg"
+    },
+
+{
+        title: "Study Music",
+        song: "music/StudyMusicMountain.mp3",
+        cover: "images/cover3.jpg"
+    }
+
+
+];
+
+
+function loadSong(index) {
+
+    let selectedSong = musicPlaylist[index];
+    studyAudio.src = selectedSong.song;
+    musicCover.src = selectedSong.cover;
+    musicTitle.textContent = selectedSong.title;
+    currentSongIndex = index;
+
+}
+
+
+function playMusic() 
+{
+    studyAudio.play();
+}
+
+function pauseMusic()
+ {
+    studyAudio.pause();
+}
+
+
+function rewindMusic() {
+
+    studyAudio.currentTime = Math.max(
+        0,
+        studyAudio.currentTime - 15
+    );
+
+}
+
+
+function forwardMusic() {
+
+    studyAudio.currentTime = Math.min(
+        studyAudio.duration || Infinity,
+        studyAudio.currentTime + 15
+    );
+
+}
+
+
+function nextSong() {
+
+    // Move to the next song
+    currentSongIndex++;
+
+    // Go back to the first song if we reach the end
+    if (currentSongIndex >= musicPlaylist.length) {
+        currentSongIndex = 0;
+    }
+
+    // Load the new song
+    loadSong(currentSongIndex);
+
+    // Start playing it
+    playMusic();
+
+}
+
+
+function previousSong() {
+    currentSongIndex--;
+    if (currentSongIndex < 0) 
+        {
+        currentSongIndex = musicPlaylist.length - 1;
+        }
+
+    loadSong(currentSongIndex);
+
+    playMusic();
+
+}
+
+
+
+musicPlay.addEventListener("click", playMusic);
+musicPause.addEventListener("click", pauseMusic);
+musicBack.addEventListener("click", rewindMusic);
+musicForward.addEventListener("click", forwardMusic);
+musicNext.addEventListener("click", nextSong);
+musicPrevious.addEventListener("click", previousSong);
+
+
+loadSong(currentSongIndex);
+studyAudio.addEventListener("ended", nextSong);
