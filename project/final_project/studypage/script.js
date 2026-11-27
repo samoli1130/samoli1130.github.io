@@ -225,19 +225,19 @@ const musicPlaylist = [
 
     {
         title: "Lofi Study",
-        song: "music/LofiStudy.mp3",
+        song: "music/zephiramusic-lofi-study-581724.mp3",
         cover: "images/Library.jpg"
     },
 
     {
         title: "Cafe Jazz Coffee Shop",
-        song: "music/CafeJazzCoffeeShop.mp3",
+        song: "music/alex-morgan-cafe-jazz-coffee-shop-music-564287.mp3",
         cover: "images/SheetMusic.jpg"
     },
 
     {
-        title: "Laid Back Cafe Beat",
-        song: "music/LaidBackCafe.mp3",
+        title: "Study Music Session",
+        song: "music/alex-morgan-study-music-session-559993.mp3",
         cover: "images/PinkBooks.jpg"
     },
 
@@ -249,7 +249,7 @@ const musicPlaylist = [
 
 {
         title: "Study Music",
-        song: "music/StudyMusicMountain.mp3",
+        song: "music/the_mountain-study-music-602501.mp3",
         cover: "images/OpenBook.jpg"
     }
 
