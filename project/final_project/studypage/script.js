@@ -160,15 +160,15 @@ function updateStopwatchDisplay() {
     let milliseconds = Math.floor((stopwatchTime % 1000) / 10);
 
     stopwatchDisplay.textContent =
-    string(minutes).padStart (2, "0") + ":" +
-    string(seconds).padStart (2, "0") + ":" + 
-    string(milliseconds).padStart (2, "0");
+    String(minutes).padStart(2, "0") + ":" +
+    String(seconds).padStart(2, "0") + "." +
+    String(milliseconds).padStart(2, "0");
 
 }
 
 function startStopwatch() {
     if (stopwatchInterval !== null) {
-        restart;
+        return;
     }
 
     stopwatchStartTime = Date.now() - stopwatchTime;
