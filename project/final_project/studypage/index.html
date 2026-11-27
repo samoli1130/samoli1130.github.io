@@ -7,27 +7,26 @@
     <body>
 <div class="card" id="timerBox">
     <h3>Timer:</h3>
-    <h3 id="timerNumber">00:00</h3>
-    <input type="number" id="minutes" placeholder="Minutes">
+    <h3 id="timerDisplay">00:00</h3>
+    <label id="minutesLabel">Minutes:</label>
+    <input type="number" id="minutesInput" placeholder="00" max="999" min="0">
+    <label id="secondsLabal">Seconds:</label>
+    <input type="number" id="secondsInput" placeholder="00" max="59" min="0">
     
-    <button onclick="startTimer()" >Start</button>
-    <button onclick="pauseTimer()">Pause</button>
-    <button onclick="resetTimer()">Reset</button>
+    <button id="start-btn" >Start</button>
+    <button id="pause-btn">Pause</button>
+    <button id="reset-btn">Reset</button>
 
 
 </div>
 
-        <!-- Three-bar menu button -->
     <button class="menu-btn" onclick="openSidebar()">☰</button>
 
-    <!-- Sidebar -->
     <div id="mySidebar" class="sidebar">
 
-        <!-- Close button -->
         <a href="javascript:void(0)" class="close-btn"
            onclick="closeSidebar()">×</a>
 
-        <!-- Three links -->
         <a href="https://samoli1130.github.io/project/final_project/index.html">Home</a>
         <a href="https://samoli1130.github.io/project/final_project/studypage/">Study Page</a>
         <a href="https://samoli1130.github.io/project/final_project/minigame/">Mini Game</a>
